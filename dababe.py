@@ -126,7 +126,7 @@ async def winnie_post(ctx):
 
 #don't work well but still there
 @client.command(pass_context=True)
-async def board(ctx, member):
+async def board(ctx):
     #check if is really doing
     print("doing! ")
     #this list will have all the messages from user
