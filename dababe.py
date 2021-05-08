@@ -124,26 +124,36 @@ async def winnie_post(ctx):
     await ctx.send(str(choice(urls)))
     chromedriver.quit()
 
-
+#don't work well but still there
 @client.command(pass_context=True)
 async def board(ctx, member):
+    #check if is really doing
     print("doing! ")
+    #this list will have all the messages from user
     a = []
+    #for each message in the channel until it reach 10k messages listed
+    #the message will be appended to the "a" list
     msgs = await ctx.channel.history(limit=10000).flatten()
     for msg in msgs:
+        #check if the author of the found message is actually the target
         if msg.author == member:
             a.append(msg)
+    #send how many messages the target member has
     await ctx.channel.send(member + ", you have the following number of messages:\n**"+str(len(a))+"**")
 
+#don't ask me why lol
 @client.command(pass_context=True)
 async def dripcar(ctx):
+    #list of the dripcars
     a = []
+    #for dripcar image in the drip cars folder
     for file in os.listdir("drip-cars-database\\"):
         print(file)
         a.append(file)
+    #choses one of the images in the drip car folder
     await ctx.channel.send(file=discord.File("drip-cars-database\\"+str(choice(a))))
 
 
-
+#run it
 
 client.run(token)
