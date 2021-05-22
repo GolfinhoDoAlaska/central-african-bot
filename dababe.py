@@ -11,7 +11,7 @@ from random import choice
 import os
 
 #the bot token
-token = "ODI3Mzk3NTExNzIyNDM0NTgx.YGab-w.JR3FA-UvJ7WEEAKY50WADCvnDuk"
+token = #do you really think I would post the token?!
 
 #variables, configuration, etc.
 intents = discord.Intents.default()
