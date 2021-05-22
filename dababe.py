@@ -6,9 +6,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 import time
-from random import randint
+from random import randint, random
 from random import choice
 import os
+import wikipedia
+import shutil
 
 #the bot token
 token = "do you really think I would post the token?"
